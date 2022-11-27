@@ -1,11 +1,11 @@
 {
-  "name": "Sherlock Framework",
+  "name": "SherlockFramework",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --config webpack-common.js --watch",
+    "watch": "webpack --config webpack.common.js --watch",
     "start": "electron ."
   },
   "keywords": [],
@@ -24,6 +24,7 @@
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
+    "svg-url-loader": "^8.0.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0"
   }

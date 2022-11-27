@@ -51,10 +51,13 @@ html{
         background-color: $color-accent;
         fill:#1a130fde;
         
-        svg {
-            width: inherit;
-            height: inherit;
-           }
+        .icon{
+            width: 80%;
+            height: 80%;
+            margin-top:10%;
+            margin-left:10%;
+        }
+
     }
 
     

@@ -1,3 +1,68 @@
-h1{
-    color:black
+/*
+TODO: read colors from config file
+*/
+
+
+//COLORS
+$color-bg:#161d2d;
+$color-accent:#ffc421;
+$color-accent-hover:#ffd664;
+$color-accent-click:#e0a606;
+
+
+//PARAMETERS
+$width: 70%;
+$height:50px;
+
+*{
+    width: 100%;
+    border:none;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    background-color: $color-bg;
+}
+
+.search-bar-container{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50%;
+    color: $color-accent;
+    border: none;
+    width: $width;
+    opacity: 100%;
+
+    input{
+        width: 100%;
+        height: $height;
+        text-indent: 10px; 
+    }
+
+    input:focus{
+        outline: 0;
+    }
+
+    .submit-btn{
+        width: $height;
+        height: $height;
+        background-color: $color-accent;
+        fill:#1a130fde;
+        
+        svg {
+            width: inherit;
+            height: inherit;
+           }
+    }
+
+    
+    .submit-btn:hover{
+        background-color: $color-accent-hover;
+    }
+
+    .submit-btn:active{
+        background-color: $color-accent-click;
+    }
 }

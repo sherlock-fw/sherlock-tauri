@@ -8,14 +8,20 @@ $color-bg:#161d2d;
 $color-accent:#ffc421;
 $color-accent-hover:#ffd664;
 $color-accent-click:#e0a606;
-
+$color-text-unselected: #839eb7;
+$color-searchbar: #4e4c4c;
 
 //PARAMETERS
-$width: 70%;
-$height:50px;
+$searchbar-width: 45%;
+$searchbar-height:45px;
+$searchbar-radius: 3px;
+
+
+header{
+    margin-top: 100px;
+}
 
 *{
-    width: 100%;
     border:none;
     padding: 0;
     margin: 0;
@@ -25,20 +31,57 @@ html{
     background-color: $color-bg;
 }
 
+
+//SIDEBAR
+.sidebar-container{
+    margin: none;
+    height: 100vh;
+    width: 30%;
+    background-color: $color-searchbar;
+    
+    .sidebar-item{
+	    display: flex;
+	    justify-content:left;    
+	    gap:10px; 
+
+	    .sidebar-item-icon{
+		fill:$color-accent;
+	    }
+
+	    h1{
+		color: $color-text-unselected;
+	    }
+    }
+}
+
+////////////
+
+//SEARCHBAR
 .search-bar-container{
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 50%;
+    justify-content: center;
+    align-items: center;
     color: $color-accent;
     border: none;
-    width: $width;
-    opacity: 100%;
+    
 
     input{
-        width: 100%;
-        height: $height;
+        flex-basis: 50%;
+        background-color:$color-searchbar;
+        height: $searchbar-height;
         text-indent: 10px; 
+        font-size: 20px;
+        box-shadow: -4px 0px 20px 0px rgba(17, 17, 26, 0.18);
+        border-radius: $searchbar-radius 0 0 $searchbar-radius;
+        color:$color-text-unselected;
+        opacity: 80%;
+    }
+
+    ::placeholder{
+        color:$color-text-unselected;
+        opacity: 0.6;
     }
 
     input:focus{
@@ -46,16 +89,18 @@ html{
     }
 
     .submit-btn{
-        width: $height;
-        height: $height;
+        width: $searchbar-height+10px;
+        height: $searchbar-height;
         background-color: $color-accent;
+        border-radius: 0 $searchbar-radius $searchbar-radius 0;
+        box-shadow: -4px 0px 20px 0px rgba(17, 17, 26, 0.18);
         fill:#1a130fde;
         
         .icon{
-            width: 80%;
-            height: 80%;
-            margin-top:10%;
-            margin-left:10%;
+            width: 75%;
+            height: 70%;
+            margin-top:12%;
+            margin-left:14%;
         }
 
     }
@@ -68,4 +113,15 @@ html{
     .submit-btn:active{
         background-color: $color-accent-click;
     }
+
+    
 }
+.logo{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    opacity: 5%;
+    fill:$color-text-unselected;
+}
+////////////

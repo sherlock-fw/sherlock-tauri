@@ -8,10 +8,13 @@ props:
 - icon: the icon of the item. (i.e svg component)
 */
 export default function SideBarItem(props){
+  
+    const showSidebar = () => props.hook.setSidebar(props.title)
     return(
-        <div className="sidebar-item">
+        <div className={props.hook.sidebar === props.title ? "sidebar-item selected" : "sidebar-item"} onClick={showSidebar}>
+           <div className="sidebar-item-notch"/>
             <div className="sidebar-item-icon">{props.icon}</div>
-            <h1>{props.title}</h1>
+            <div className="sidebar-item-title"><h1>{props.title}</h1></div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useState,Children,cloneElement} from 'react'
 
 
 
@@ -7,7 +7,20 @@ import React from 'react'
  * incharge of moving between them.
  * */
 export default function SideBar(props){
+	const [sidebar,setSidebar] = useState(props.selected?props.selected:"")
+
+	//iterate the children and recreate them with props.hook
+	const hook = {sidebar:sidebar,setSidebar:setSidebar}
+	const RenderChildren = () => (
+		Children.map(props.children, child => {
+		  return cloneElement(child, {
+			title: child.props.title,
+			icon:child.props.icon,
+			hook:hook
+		 })
+	   })
+	 )
 
 	return(
-		<div className="sidebar-container">{props.children}</div>
+		<div  className="sidebar-container">{<RenderChildren/>}</div>
 	)}

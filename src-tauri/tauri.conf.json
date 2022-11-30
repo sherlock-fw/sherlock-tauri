@@ -56,10 +56,14 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 900,
         "resizable": true,
         "title": "Sherlock Framework",
-        "width": 800
+        "width": 1422,
+        "minHeight": 900,
+        "minWidth": 1422,
+        "alwaysOnTop": false
+        
       }
     ]
   }

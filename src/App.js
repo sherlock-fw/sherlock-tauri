@@ -12,7 +12,7 @@ export default function App(){
 
 	return(
 		<div>
-		<SideBar>
+		<SideBar selected="Search">
 		<SideBarItem title="Search" icon={<SearchIcon/>}/>
 		<SideBarItem title="Engines" icon={<EngineIcon/>}/>
 		<SideBarItem title="Results" icon={<ResultsIcon/>}/>

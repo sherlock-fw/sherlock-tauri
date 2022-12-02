@@ -2,23 +2,59 @@
 TODO: read colors from config file
 */
 
+//COLOR SCHEMES
+
+
+///*
+//dark
+$theme-bg:      #161d2d;
+$theme-bg-2:    #222A3E;
+$theme-bg-3:    #252d46;
+$theme-bg-4:    #1c243a;
+$theme-bg-5:    #18213b;
+$theme-black:   #1a130fde;
+$theme-accent-1:#ffc421;
+$theme-accent-2:#ffd664;
+$theme-accent-3:#e0a606;
+$theme-text-1:  #839eb7;
+$theme-text-2:  #515c77;
+//*/
+
+/*
+//light
+$theme-bg:      #161d2d;
+$theme-bg-2:    #222A3E;
+$theme-bg-3:    #252d46;
+$theme-bg-4:    #1c243a;
+$theme-bg-5:    #18213b;
+$theme-black:   #1a130fde;
+$theme-accent-1:#ffc421;
+$theme-accent-2:#ffd664;
+$theme-accent-3:#e0a606;
+$theme-text-1:  #839eb7;
+$theme-text-2:  #515c77;
+*/
+
+
 
 //COLORS
-$color-bg:#161d2d;
-$color-accent:#ffc421;
-$color-accent-hover:#ffd664;
-$color-accent-click:#e0a606;
-$color-text-unselected: #839eb7;
+$color-bg: $theme-bg;
+$color-accent: $theme-accent-1;
+$color-accent-hover: $theme-accent-2;
+$color-accent-click: $theme-accent-3;
+$color-text-unselected: $theme-text-1;  
 
-$color-searchbar: #515c77;
-$color-searchbar-icon:#1a130fde;
+$color-searchbar: $theme-text-2;
+$color-searchbar-icon: $theme-black; 
 
-$color-sidebar-bg: #222A3E;
-$color-sidebar-hover:#252d46;
-$color-sidebar-selected-hover:#1c243a;
-$color-sidebar-active:#18213b;
+$color-sidebar-bg: $theme-bg-2;
+$color-sidebar-hover: $theme-bg-3;
+$color-sidebar-selected-hover: $theme-bg-4;
+$color-sidebar-active: $theme-bg-5;    
 
 $color-logo:$color-text-unselected;
+
+
 //PARAMETERS
 //searchbar
 $searchbar-width: 45%;

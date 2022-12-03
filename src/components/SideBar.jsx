@@ -15,6 +15,7 @@ export default function SideBar(props){
 		Children.map(props.children, child => {
 		  return cloneElement(child, {
 			title: child.props.title,
+			to:child.props.to,
 			icon:child.props.icon,
 			hook:hook
 		 })

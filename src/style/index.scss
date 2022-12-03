@@ -81,7 +81,7 @@ $sidebar-item-text-size: 16px;
 //logo
 $logo-width:100%;
 $logo-height:80%;
-$logo-opacity:5%;
+$logo-opacity:50%;
 
 *{
     border:none;
@@ -231,7 +231,6 @@ html{
     position: absolute;
     width: $logo-width;
     height: $logo-height;
-    z-index: -1;
     opacity: $logo-opacity;
     fill:$color-logo;
 }

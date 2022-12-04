@@ -1,34 +1,41 @@
-import React from 'react';
-import SideBar from './components/SideBar';
-import SideBarItem from './components/SideBarItem'
-import SearchView from './views/SearchView';
-import { ThemesContext,useMode } from './theme';
-import {CssBaseline, ThemeProvider} from '@mui/material';
-import {ReactComponent as SearchIcon} from './images/google_search.svg'
-import {ReactComponent as EngineIcon} from './images/engine.svg'
-import {ReactComponent as ResultsIcon} from './images/google_results.svg'
-import {ReactComponent as PreferencesIcon} from './images/google_settings.svg'
+import {React} from 'react';
+import {Route,Routes} from 'react-router-dom';
+import {
+	AppShell,
+	Navbar,
+	useMantineTheme,
+} from '@mantine/core';
+import NavbarItems from './components/NavbarItems';
+import Dashboard from './views/Dashboard';
 import EnginesView from './views/EnginesView';
+import TargetView from './views/TargetView';
+import SettingsView from './views/SettingsView';
+export default function App() {
 
-export default function App(){
-	const [theme, colorMode] = useMode();
+	const theme = useMantineTheme();
 
-	return(
-		<ThemesContext.Provider value={colorMode}>
-			<ThemeProvider theme={theme}>
-				<CssBaseline/>
-					<div>
-						<main className='content'>
-							<SideBar selected="Search">
-							<SideBarItem title="Search" icon={<SearchIcon/>}/>
-							<SideBarItem title="Engines" icon={<EngineIcon/>}/>
-							<SideBarItem title="Results" icon={<ResultsIcon/>}/>
-							<SideBarItem title="Preferences" icon={<PreferencesIcon/>}/>
-							</SideBar>
-							<SearchView />
-						</main>
-					</div>
-			</ThemeProvider>
-		</ThemesContext.Provider>
-	)
+
+	return (
+		<AppShell
+		styles={{
+			main: {
+			background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+			},
+		}}
+		navbarOffsetBreakpoint="sm"
+		asideOffsetBreakpoint="sm"
+		navbar={
+			<Navbar p="md" width={{ sm: 300, lg: 300 }}>
+			<NavbarItems/>
+			</Navbar>
+		}>
+			<Routes>
+			<Route path="/" element={<Dashboard/>}/> 
+				<Route path="/dashboard" element={<Dashboard/>}/> 
+				<Route path="/engines" element={<EnginesView/>}/> 
+				<Route path="/target" element={<TargetView/>}/> 
+				<Route path="/settings" element={<SettingsView/>}/> 
+			</Routes>
+		</AppShell>
+	);
 }

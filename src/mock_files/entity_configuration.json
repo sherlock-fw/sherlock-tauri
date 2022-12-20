@@ -1,0 +1,12 @@
+{
+	"entity":
+	{
+		"name":"Person",
+		"layout":{
+			"type":"preview_table",
+			"data":{
+				...	
+			}
+		}
+	}
+}

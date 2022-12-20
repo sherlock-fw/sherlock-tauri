@@ -1,0 +1,12 @@
+{
+    "layout":{
+        "type":"table",
+        "data":{
+            "posts":"int",
+            "username":"string",
+            "media":{"type":"media","data":[]},
+            "additional_info":{"type":"string","data":[]}
+        }
+    },
+    "data":[{"posts":15,"username":"john12","media":{"type":"image","data":["url","url"]},"additional_info":{}},{},{}]
+}

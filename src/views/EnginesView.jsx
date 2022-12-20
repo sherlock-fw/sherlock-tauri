@@ -1,6 +1,11 @@
 import React from 'react';
 import { useMantineTheme } from '@mantine/core';
 
+
+/*
+EnginesView:
+A view that is used for showing the  various engines results.
+*/
 export default function EnginesView(){
     const theme = useMantineTheme()
     return(

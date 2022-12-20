@@ -2,6 +2,12 @@ import React from 'react';
 import { Input } from '@mantine/core';
 import { IconSearch } from '@tabler/icons';
 import Logo from '../components/Logo';
+
+/*
+Dashboard:
+The main view of the application.
+Used for sending the engines searches.
+*/
 export default function Dashboard(){
 
     return(

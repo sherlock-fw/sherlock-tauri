@@ -1,7 +1,13 @@
 import React from 'react';
 import { useMantineTheme } from '@mantine/core';
 
+
+/*
+TargetView:
+A view that is used for presenting the collected data on a specific entity.
+*/
 export default function TargetView(){
+
     const theme = useMantineTheme()
     return(
         <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>

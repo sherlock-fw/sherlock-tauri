@@ -1,6 +1,10 @@
 import React from 'react';
 import { useMantineTheme } from '@mantine/core';
 
+/*
+SettingsView:
+The application setting view.
+*/
 export default function SettingsView(){
     const theme = useMantineTheme()
     return(

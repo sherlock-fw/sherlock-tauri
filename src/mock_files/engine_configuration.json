@@ -1,0 +1,16 @@
+{
+    "engine":{
+        "name":"twitter",
+        "path":"/usr/bin/twitter_engine",
+        "commands":{
+            "default":"-u $QUERY"
+        },
+	"output": {
+		"table":{
+			"username":"str"
+		}
+	}
+
+    }
+}
+

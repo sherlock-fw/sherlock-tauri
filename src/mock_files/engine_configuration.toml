@@ -1,0 +1,10 @@
+[information]
+name="twitter"
+path="/usr/bin/twitter_engine"
+
+[commands]
+default= "-u $QUERY"
+
+
+
+
